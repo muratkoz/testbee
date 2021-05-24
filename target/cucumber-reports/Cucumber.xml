@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="64.593">
+    <testcase classname="Navigating To Modules" name="User can see correct number of Baby Nests products" time="22.31">
+        <failure message="expected:&lt;3,76[4]&gt; but was:&lt;3,76[3]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given the user click on searchbox...........................................passed
+Given the user navigates to "Home & Living" module..........................passed
+When the user navigates to "Bedding" second module..........................passed
+And the user navigates to "Baby Nests" second module........................passed
+Then "3,764" items should be found..........................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<3,76[4]> but was:<3,76[3]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.etsy.step_definitions.HomeLiving_stepdefinitions.items_should_be_found(HomeLiving_stepdefinitions.java:54)
+	at ✽."3,764" items should be found(file:///C:/Users/murat/IdeaProjects/testbee/src/test/resources/features/Modules.feature:12)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Navigating To Modules" name="User can see correct number of Baby Nests products 2" time="21.236">
+        <failure message="expected:&lt;3,11[0,29]8&gt; but was:&lt;3,11[1,67]8&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given the user click on searchbox...........................................passed
+Given the user navigates to "Home & Living" module..........................passed
+When the user navigates to "Kitchen & Dining" second module.................passed
+And the user navigates to "Drink & Barware" second module...................passed
+Then "3,110,298" items should be found......................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<3,11[0,29]8> but was:<3,11[1,67]8>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.etsy.step_definitions.HomeLiving_stepdefinitions.items_should_be_found(HomeLiving_stepdefinitions.java:54)
+	at ✽."3,110,298" items should be found(file:///C:/Users/murat/IdeaProjects/testbee/src/test/resources/features/Modules.feature:12)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Navigating To Modules" name="User can see correct number of Baby Nests products 3" time="20.583">
+        <failure message="expected:&lt;149,6[33]&gt; but was:&lt;149,6[57]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given the user click on searchbox...........................................passed
+Given the user navigates to "Jewelry" module................................passed
+When the user navigates to "Necklaces" second module........................passed
+And the user navigates to "Chains" second module............................passed
+Then "149,633" items should be found........................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<149,6[33]> but was:<149,6[57]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.etsy.step_definitions.HomeLiving_stepdefinitions.items_should_be_found(HomeLiving_stepdefinitions.java:54)
+	at ✽."149,633" items should be found(file:///C:/Users/murat/IdeaProjects/testbee/src/test/resources/features/Modules.feature:12)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
