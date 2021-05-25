@@ -17,9 +17,6 @@ public class LoginPage extends BasePage{
     @FindBy(id = "com.etsy.android:id/button_signin")
     public MobileElement signInButton;
 
-    @FindBy(id = "com.etsy.android:id/txt_error")
-    public MobileElement errorMessage;
-
 
 
 }

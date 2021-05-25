@@ -19,28 +19,18 @@ public class DashboardPage extends BasePage{
     @FindBy(id = "com.etsy.android:id/largeLabel")
     public MobileElement homeButton;
 
-    @FindBy(xpath = "//*[@text='You']")
-    public MobileElement youButton;
-
-    @FindBy(xpath = "//*[@text='Favorites']")
-    public MobileElement favoritesButton;
-
-    @FindBy(xpath = "//*[@text='Cart']")
-    public MobileElement cartButton;
-
-    @FindBy(xpath = "//*[@text='Settings']")
-    public MobileElement settings;
-
-    @FindBy(xpath = "//*[@text='Legal']")
-    public MobileElement legal;
-
-    @FindBy(xpath = "//*[@text='About This App']")
-    public MobileElement about;
+    @FindBy(id = "com.etsy.android:id/notification_subtext")
+    public MobileElement notificationMessage;
 
     @FindBy(id = "com.etsy.android:id/search_src_text")
     public MobileElement searchBox;
 
     public void navigateTo(String string) throws InterruptedException {
+        MobileElement module = driver.findElement(By.xpath("//*[@text='"+string+"']"));
+        waitUntil(module).click();
+    }
+
+    public void navigateToSecondModule(String string) throws InterruptedException {
         MobileElement module = driver.findElement(By.xpath("//*[@text='"+string+"']"));
         waitUntil(module).click();
     }

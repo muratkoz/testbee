@@ -1,14 +1,15 @@
+@shoe
 Feature: Shoes module
 
   Background:
     Given the user is on the main page
     Given the user navigates to "Shoes" module
 
-@shoe
-  Scenario: User can see correct number of Women Boots products
-    When the user navigates to "Women's Shoes" second module
+
+  Scenario: User can see correct number of Men Boots products
+    When the user navigates to "Men's Shoes" second module
     And the user navigates to "Boots" second module
-    Then "38,544" items should be found
+    Then "11,745" items should be found
 
 
   Scenario: User can see correct number of Clogs&Mules products

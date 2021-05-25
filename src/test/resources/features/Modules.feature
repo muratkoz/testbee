@@ -4,8 +4,7 @@ Feature: Navigating To Modules
   Background:
     Given the user click on searchbox
 
-
-  Scenario Outline: User can see correct number of Baby Nests products
+  Scenario Outline: User can see correct number of searched products
     Given the user navigates to "<firstmodule>" module
     When the user navigates to "<secondmodule>" second module
     And the user navigates to "<thirdmodule>" second module
@@ -14,7 +13,7 @@ Feature: Navigating To Modules
       | firstmodule   | secondmodule     | thirdmodule     | numberofresults |
       | Home & Living | Bedding          | Baby Nests      | 3,764           |
       | Home & Living | Kitchen & Dining | Drink & Barware | 3,110,298       |
-      | Jewelry       | Necklaces        | Chains          | 149,633         |
+      | Jewellery     | Necklaces        | Chains          | 149,633         |
 
 
 #  Scenario: User can see correct number of Office Furniture products

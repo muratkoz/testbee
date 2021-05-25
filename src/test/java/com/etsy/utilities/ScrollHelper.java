@@ -10,7 +10,7 @@ public class ScrollHelper {
     private AndroidDriver driver = Initialize.driver;
 
     public void scrollVerticalHelper(String text){
-        driver.findElement(MobileBy.AndroidUIAutomator(
+          driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiScrollable(new UiSelector().scrollable(true))" +
                         ".scrollTextIntoView(\""+text+"\")"));
 

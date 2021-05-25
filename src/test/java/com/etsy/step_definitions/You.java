@@ -22,8 +22,18 @@ public class You {
     }
 
     @When("the user click on Settings")
-    public void the_user_click_on_Settings() {
+    public void the_user_click_on_Settings() throws InterruptedException {
         new DashboardPage().element("Settings").click();
     }
 
+    @Then("Legal page should be opened")
+    public void legalPageShouldBeOpened() throws InterruptedException {
+        Assert.assertTrue(dashboardPage.element("Legal").isDisplayed());
+    }
+
+    @Then("First notification should appear")
+    public void firstNotificationShouldAppear() {
+        Assert.assertTrue(dashboardPage.notificationMessage.isDisplayed());
+        System.out.println(dashboardPage.notificationMessage.getText());
+    }
 }

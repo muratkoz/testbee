@@ -1,6 +1,7 @@
 package com.etsy.step_definitions;
 
 
+import com.etsy.utilities.ConfigurationReader;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -39,11 +40,11 @@ public class Initialize {
     public void initializeDriver() {
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-        desiredCapabilities.setCapability(MobileCapabilityType.VERSION, "11.0");
-        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "R5CR121Y8LR"); //Nexus5
-        desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\murat\\IdeaProjects\\etsy.apk");
-        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, ConfigurationReader.get("platform_name"));
+        desiredCapabilities.setCapability(MobileCapabilityType.VERSION, ConfigurationReader.get("version"));
+        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, ConfigurationReader.get("device")); //R5CR121Y8LR //R3CR20M0ZCD //Nexus5
+        desiredCapabilities.setCapability(MobileCapabilityType.APP, ConfigurationReader.get("app_path"));
+        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, ConfigurationReader.get("automation_name"));
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, false);
 
         desiredCapabilities.setCapability("unicodeKeyboard", "true");

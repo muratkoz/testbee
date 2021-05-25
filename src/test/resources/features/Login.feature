@@ -9,6 +9,7 @@ Feature: Login functionality
       |username            |password                |
       |mmrtkz@gmail.com    |TestBee123              |
 
+
   Scenario Outline: User enters invalid credentials
     When user clicks on Get Started button
     And user enters invalid "<email>" and valid or invalid "<password>"
@@ -21,26 +22,27 @@ Feature: Login functionality
       |@                          |@@@@@                   |
 
 
+  Scenario Outline: User enters invalid credentials
+    When user clicks on Get Started button
+    And user enters invalid "<username>" and valid or invalid "<password>"
+    Then "Username is invalid." message should appear
+    Examples:
+      |username                   |password                |
+      |invalidemail.gmail.com     |testtest                |
+      |nameandsurname             |invalidpassword         |
+      |TeBee147test               |TestBee123              |
+      |murat123                   |@@@@@                   |
 
-#  Scenario Outline: User enters invalid credentials
-#    When user clicks on Get Started button
-#    And user enters invalid "<username>" and valid or invalid "<password>"
-#    Then "Username is invalid." message should appear
-#    Examples:
-#      |username                   |password                |
-#      |invalidemail.gmail.com     |testtest                |
-#      |nameandsurname             |invalidpassword         |
-#      |TeBee147test               |TestBee123              |
-#      |murat123                   |@@@@@                   |
-#
-#  Scenario Outline: User enters invalid credentials
-#    When user clicks on Get Started button
-#    And user enters valid "<email>" and invalid "<password>"
-#    Then "Password was incorrect." message should appear
-#    Examples:
-#      |email               |password                |
-#      |mmrtkz@gmail.com    |mmrtkz@gmail.com        |
-#      |mmrtkz@gmail.com    |123456789               |
+
+  Scenario Outline: User enters invalid credentials
+    When user clicks on Get Started button
+    And user enters valid "<email>" and invalid "<password>"
+    Then "Password was incorrect." message should appear
+    Examples:
+      |email               |password                |
+      |mmrtkz@gmail.com    |mmrtkz@gmail.com        |
+      |mmrtkz@gmail.com    |123456789               |
+
 
 #  Scenario Outline: User enters invalid credentials
 #    When user clicks on Get Started button
